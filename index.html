@@ -1,221 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>MineMC | Official Store</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MineMC Store</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <div class="logo">⛏️ Mine<span>MC</span></div>
+    <div class="logo">⛏️ MineMC</div>
 
     <nav>
         <a href="#home">Home</a>
         <a href="#ranks">Ranks</a>
         <a href="#how">How to Buy</a>
+        <a href="#discord">Discord</a>
     </nav>
 </header>
 
+
+<!-- HERO -->
+
 <section id="home" class="hero">
-    <div class="badge">⚡ OFFICIAL MINECRAFT STORE</div>
 
-    <h1>Upgrade Your<br><span>MineMC</span> Experience</h1>
+    <div class="hero-content">
 
-    <p>Unlock exclusive ranks, perks and rewards on MineMC Network.</p>
+        <div class="badge">
+            🔥 OFFICIAL MINEMC STORE
+        </div>
 
-    <a href="#ranks" class="btn">VIEW RANKS</a>
+        <h1>
+            Upgrade Your<br>
+            <span>Minecraft Experience</span>
+        </h1>
+
+        <p>
+            Get exclusive ranks, perks and special features on MineMC.
+        </p>
+
+        <a href="#ranks" class="main-btn">
+            VIEW RANKS
+        </a>
+
+    </div>
+
 </section>
+
+
+<!-- RANKS -->
 
 <section id="ranks" class="section">
-    <div class="title">
-        <small>CHOOSE YOUR RANK</small>
-        <h2>Premium Ranks</h2>
-    </div>
 
-    <div class="cards">
+    <h2>⚡ Choose Your Rank</h2>
 
-        <div class="card featured">
-            <div class="popular">POPULAR</div>
-            <div class="icon">⭐</div>
+    <p class="section-subtitle">
+        Unlock powerful perks and stand out on MineMC.
+    </p>
+
+
+    <div class="rank-container">
+
+
+        <!-- VIP -->
+
+        <div class="rank-card">
+
+            <div class="rank-icon">⭐</div>
+
             <h3>VIP</h3>
-            <div class="price">₹49</div>
+
+            <div class="price">
+                ₹49
+            </div>
 
             <ul>
-                <li>VIP Prefix</li>
-                <li>Exclusive Kit</li>
-                <li>Special Chat Color</li>
-                <li>Extra Commands</li>
+                <li>✔ VIP Prefix</li>
+                <li>✔ Special Chat Color</li>
+                <li>✔ VIP Kit</li>
+                <li>✔ Exclusive Commands</li>
             </ul>
 
-            <button onclick="buyRank('VIP',49)">BUY NOW</button>
+            <button
+                class="buy-btn"
+                onclick="openPurchase('VIP',49)">
+                BUY NOW
+            </button>
+
         </div>
 
-        <div class="card">
-            <div class="icon">💎</div>
+
+        <!-- MVP -->
+
+        <div class="rank-card featured">
+
+            <div class="popular">
+                MOST POPULAR
+            </div>
+
+            <div class="rank-icon">💎</div>
+
             <h3>MVP</h3>
-            <div class="price">₹99</div>
+
+            <div class="price">
+                ₹99
+            </div>
 
             <ul>
-                <li>MVP Prefix</li>
-                <li>All VIP Perks</li>
-                <li>Premium Kit</li>
-                <li>More Commands</li>
+                <li>✔ MVP Prefix</li>
+                <li>✔ Custom Chat Color</li>
+                <li>✔ MVP Kit</li>
+                <li>✔ More Commands</li>
+                <li>✔ Special Effects</li>
             </ul>
 
-            <button onclick="buyRank('MVP',99)">BUY NOW</button>
+            <button
+                class="buy-btn"
+                onclick="openPurchase('MVP',99)">
+                BUY NOW
+            </button>
+
         </div>
 
-        <div class="card">
-            <div class="icon">👑</div>
+
+        <!-- MVP+ -->
+
+        <div class="rank-card">
+
+            <div class="rank-icon">👑</div>
+
             <h3>MVP+</h3>
-            <div class="price">₹199</div>
+
+            <div class="price">
+                ₹199
+            </div>
 
             <ul>
-                <li>MVP+ Prefix</li>
-                <li>All MVP Perks</li>
-                <li>Exclusive Cosmetics</li>
-                <li>Priority Support</li>
+                <li>✔ MVP+ Prefix</li>
+                <li>✔ Custom Join Message</li>
+                <li>✔ Premium Kit</li>
+                <li>✔ Advanced Commands</li>
+                <li>✔ Particle Effects</li>
             </ul>
 
-            <button onclick="buyRank('MVP+',199)">BUY NOW</button>
+            <button
+                class="buy-btn"
+                onclick="openPurchase('MVP+',199)">
+                BUY NOW
+            </button>
+
         </div>
 
-        <div class="card">
-            <div class="icon">🔥</div>
+
+        <!-- LEGEND -->
+
+        <div class="rank-card legend">
+
+            <div class="rank-icon">🔥</div>
+
             <h3>LEGEND</h3>
-            <div class="price">₹299</div>
+
+            <div class="price">
+                ₹299
+            </div>
 
             <ul>
-                <li>Legend Prefix</li>
-                <li>All Premium Perks</li>
-                <li>Legend Kit</li>
-                <li>Exclusive Benefits</li>
+                <li>✔ LEGEND Prefix</li>
+                <li>✔ All Premium Kits</li>
+                <li>✔ Exclusive Commands</li>
+                <li>✔ Custom Effects</li>
+                <li>✔ Special Perks</li>
+                <li>✔ Priority Support</li>
             </ul>
 
-            <button onclick="buyRank('LEGEND',299)">BUY NOW</button>
+            <button
+                class="buy-btn"
+                onclick="openPurchase('LEGEND',299)">
+                BUY NOW
+            </button>
+
         </div>
 
     </div>
+
 </section>
 
-<section id="how" class="section how">
-    <div class="title">
-        <small>SIMPLE & FAST</small>
-        <h2>How to Buy</h2>
-    </div>
+
+<!-- HOW TO BUY -->
+
+<section id="how" class="section how-section">
+
+    <h2>🛒 How To Buy</h2>
 
     <div class="steps">
-        <div><b>01</b><h3>Choose Rank</h3><p>Select your desired rank.</p></div>
-        <div><b>02</b><h3>Enter Username</h3><p>Enter your Minecraft username.</p></div>
-        <div><b>03</b><h3>Scan QR</h3><p>Pay the exact amount shown.</p></div>
-        <div><b>04</b><h3>Get Your Rank</h3><p>Payment will be verified by staff.</p></div>
+
+        <div class="step">
+            <span>1</span>
+            <h3>Select Rank</h3>
+            <p>Choose the rank you want to purchase.</p>
+        </div>
+
+        <div class="step">
+            <span>2</span>
+            <h3>Enter Username</h3>
+            <p>Enter your exact Minecraft username.</p>
+        </div>
+
+        <div class="step">
+            <span>3</span>
+            <h3>Make Payment</h3>
+            <p>Pay using UPI through the payment page.</p>
+        </div>
+
+        <div class="step">
+            <span>4</span>
+            <h3>Verification</h3>
+            <p>Staff will verify your payment and deliver your rank.</p>
+        </div>
+
     </div>
+
 </section>
 
-<section class="discord">
-    <h2>Need Help?</h2>
-    <p>Join our Discord for support and payment verification.</p>
 
-    <a href="https://discord.gg/DEzdfCcqKR"
-       target="_blank"
-       class="btn">
-       JOIN DISCORD
-    </a>
+<!-- DISCORD -->
+
+<section id="discord" class="discord-section">
+
+    <div>
+
+        <h2>💬 Join MineMC Discord</h2>
+
+        <p>
+            Get support, announcements, giveaways and updates.
+        </p>
+
+        <a
+            href="https://discord.gg/DEzdfCcqKR"
+            target="_blank"
+            class="discord-btn">
+
+            JOIN DISCORD
+
+        </a>
+
+    </div>
+
 </section>
 
-<footer>
-    © 2026 MineMC Network<br>
-    Official Rank Store
-</footer>
 
+<!-- PURCHASE POPUP -->
 
-<!-- BUY POPUP -->
-
-<div id="popup" class="popup">
+<div id="purchasePopup" class="popup">
 
     <div class="popup-box">
 
-        <button class="close" onclick="closePopup()">×</button>
+        <button class="close"
+            onclick="closePurchase()">
+            ×
+        </button>
 
-        <div class="icon">🛒</div>
+        <h2>🛒 Purchase Rank</h2>
 
-        <h2 id="rankName">Buy Rank</h2>
+        <p class="selected-rank">
+            Selected Rank:
+            <strong id="selectedRank">
+                VIP
+            </strong>
+        </p>
 
-        <p id="rankPrice" class="selected"></p>
 
-        <input id="username"
-               type="text"
-               placeholder="Enter Minecraft Username">
+        <input
+            type="text"
+            id="username"
+            placeholder="Enter Minecraft Username"
+            autocomplete="off">
 
-        <div class="payment">
 
-            <h3>💳 UPI PAYMENT</h3>
+        <div class="payment-box">
 
-            <p>Pay the exact amount using this UPI ID:</p>
+            <h3>💳 UPI Payment</h3>
 
-            <div class="upi">
-                6207867258@fam
-            </div>
-
-            <div class="qr-placeholder">
-                <span>📱</span>
-                <b>QR CODE</b>
-                <small>QR will be added here</small>
-            </div>
-
-            <p class="secure">
-                🔒 Never share your UPI PIN or OTP.
+            <p>
+                Amount:
+                <strong>
+                    ₹<span id="paymentAmount">49</span>
+                </strong>
             </p>
+
+
+            <div class="upi-box">
+
+                <span>UPI ID</span>
+
+                <strong>
+                    6207867258@fam
+                </strong>
+
+                <button
+                    onclick="copyUPI()"
+                    class="copy-btn">
+
+                    COPY
+
+                </button>
+
+            </div>
+
+
+            <!-- QR CODE -->
+
+            <div class="qr-container">
+
+                <div class="qr-placeholder">
+
+                    <span>📱</span>
+
+                    <p>QR CODE</p>
+
+                    <small>
+                        Your QR will be added here
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <p class="payment-note">
+
+                Scan the QR or use the UPI ID to pay.
+
+            </p>
+
+
+            <button
+                class="pay-btn"
+                onclick="paymentDone()">
+
+                PAY NOW
+
+            </button>
 
         </div>
 
-        <button class="pay" onclick="paymentDone()">
-            I HAVE PAID
-        </button>
-
     </div>
+
 </div>
 
 
-<!-- VERIFICATION POPUP -->
+<!-- SUCCESS POPUP -->
 
 <div id="successPopup" class="popup">
 
-    <div class="popup-box success">
+    <div class="popup-box success-box">
 
-        <div class="success-icon">✓</div>
+        <div class="success-icon">
+            ✓
+        </div>
 
-        <h2>Payment in Verification</h2>
+        <h2>
+            Payment in Verification
+        </h2>
 
         <p>
             Your payment details have been submitted.
         </p>
 
-        <div class="delivery">
-            ⏳ <b>Your rank will arrive within 12 hours.</b>
-        </div>
-
-        <p class="small">
-            If you need help, contact our staff on Discord.
+        <p>
+            Your rank will arrive within
+            <strong>12 hours</strong>.
         </p>
 
-        <a href="https://discord.gg/DEzdfCcqKR"
-           target="_blank"
-           class="btn">
-           OPEN DISCORD
-        </a>
+        <button
+            class="close-success"
+            onclick="closeSuccess()">
 
-        <button class="close-btn" onclick="closeSuccess()">
-            CLOSE
+            DONE
+
         </button>
 
     </div>
+
 </div>
+
+
+<footer>
+
+    <div class="footer-logo">
+        ⛏️ MineMC
+    </div>
+
+    <p>
+        © 2026 MineMC. All Rights Reserved.
+    </p>
+
+    <p class="footer-note">
+        Not affiliated with Mojang or Microsoft.
+    </p>
+
+</footer>
+
 
 <script src="script.js"></script>
 
 </body>
-</html>
+    </html>
