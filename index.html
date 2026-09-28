@@ -11,15 +11,29 @@
 
 <body>
 
-<header>
-    <div class="logo">⛏️ MineMC</div>
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <a href="#home" class="logo">
+        ⛏️ <span>MineMC</span>
+    </a>
 
     <nav>
         <a href="#home">Home</a>
         <a href="#ranks">Ranks</a>
-        <a href="#how">How to Buy</a>
-        <a href="#discord">Discord</a>
+        <a href="#coins">Coins</a>
+        <a href="#crates">Crates</a>
+        <a href="#how">How To Buy</a>
     </nav>
+
+    <a
+        href="https://discord.gg/DEzdfCcqKR"
+        target="_blank"
+        class="discord-small">
+        Discord
+    </a>
+
 </header>
 
 
@@ -29,47 +43,70 @@
 
     <div class="hero-content">
 
-        <div class="badge">
-            🔥 OFFICIAL MINEMC STORE
+        <div class="online">
+            <span></span>
+            MineMC Network
         </div>
 
         <h1>
-            Upgrade Your<br>
-            <span>Minecraft Experience</span>
+            MINE<span>MC</span>
+            STORE
         </h1>
 
         <p>
-            Get exclusive ranks, perks and special features on MineMC.
+            Upgrade your Minecraft experience with exclusive
+            ranks, coins and rewards.
         </p>
 
-        <a href="#ranks" class="main-btn">
-            VIEW RANKS
-        </a>
+        <div class="hero-buttons">
+
+            <a href="#ranks" class="primary-btn">
+                VIEW RANKS
+            </a>
+
+            <a
+                href="https://discord.gg/DEzdfCcqKR"
+                target="_blank"
+                class="secondary-btn">
+                JOIN DISCORD
+            </a>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- RANKS -->
+<!-- STORE -->
 
-<section id="ranks" class="section">
+<section class="store-section" id="ranks">
 
-    <h2>⚡ Choose Your Rank</h2>
+    <div class="section-title">
 
-    <p class="section-subtitle">
-        Unlock powerful perks and stand out on MineMC.
-    </p>
+        <small>MINEMC STORE</small>
+
+        <h2>Choose Your <span>Rank</span></h2>
+
+        <p>
+            Unlock exclusive perks and stand out on the server.
+        </p>
+
+    </div>
 
 
-    <div class="rank-container">
+    <div class="products">
 
 
         <!-- VIP -->
 
-        <div class="rank-card">
+        <div class="product-card">
 
-            <div class="rank-icon">⭐</div>
+            <div class="product-icon">⭐</div>
+
+            <div class="product-type">
+                RANK
+            </div>
 
             <h3>VIP</h3>
 
@@ -77,17 +114,21 @@
                 ₹49
             </div>
 
+            <div class="line"></div>
+
             <ul>
-                <li>✔ VIP Prefix</li>
-                <li>✔ Special Chat Color</li>
-                <li>✔ VIP Kit</li>
-                <li>✔ Exclusive Commands</li>
+                <li>✓ VIP Prefix</li>
+                <li>✓ VIP Kit</li>
+                <li>✓ Special Chat Color</li>
+                <li>✓ Exclusive Commands</li>
             </ul>
 
             <button
-                class="buy-btn"
-                onclick="openPurchase('VIP',49)">
+                onclick="openPurchase('VIP',49)"
+                class="purchase-btn">
+
                 BUY NOW
+
             </button>
 
         </div>
@@ -95,13 +136,17 @@
 
         <!-- MVP -->
 
-        <div class="rank-card featured">
+        <div class="product-card popular-card">
 
-            <div class="popular">
+            <div class="popular-tag">
                 MOST POPULAR
             </div>
 
-            <div class="rank-icon">💎</div>
+            <div class="product-icon">💎</div>
+
+            <div class="product-type">
+                RANK
+            </div>
 
             <h3>MVP</h3>
 
@@ -109,18 +154,22 @@
                 ₹99
             </div>
 
+            <div class="line"></div>
+
             <ul>
-                <li>✔ MVP Prefix</li>
-                <li>✔ Custom Chat Color</li>
-                <li>✔ MVP Kit</li>
-                <li>✔ More Commands</li>
-                <li>✔ Special Effects</li>
+                <li>✓ MVP Prefix</li>
+                <li>✓ MVP Kit</li>
+                <li>✓ Custom Chat Color</li>
+                <li>✓ More Commands</li>
+                <li>✓ Special Effects</li>
             </ul>
 
             <button
-                class="buy-btn"
-                onclick="openPurchase('MVP',99)">
+                onclick="openPurchase('MVP',99)"
+                class="purchase-btn">
+
                 BUY NOW
+
             </button>
 
         </div>
@@ -128,9 +177,13 @@
 
         <!-- MVP+ -->
 
-        <div class="rank-card">
+        <div class="product-card">
 
-            <div class="rank-icon">👑</div>
+            <div class="product-icon">👑</div>
+
+            <div class="product-type">
+                RANK
+            </div>
 
             <h3>MVP+</h3>
 
@@ -138,18 +191,22 @@
                 ₹199
             </div>
 
+            <div class="line"></div>
+
             <ul>
-                <li>✔ MVP+ Prefix</li>
-                <li>✔ Custom Join Message</li>
-                <li>✔ Premium Kit</li>
-                <li>✔ Advanced Commands</li>
-                <li>✔ Particle Effects</li>
+                <li>✓ MVP+ Prefix</li>
+                <li>✓ Premium Kit</li>
+                <li>✓ Join Message</li>
+                <li>✓ Advanced Commands</li>
+                <li>✓ Particle Effects</li>
             </ul>
 
             <button
-                class="buy-btn"
-                onclick="openPurchase('MVP+',199)">
+                onclick="openPurchase('MVP+',199)"
+                class="purchase-btn">
+
                 BUY NOW
+
             </button>
 
         </div>
@@ -157,9 +214,13 @@
 
         <!-- LEGEND -->
 
-        <div class="rank-card legend">
+        <div class="product-card legend-card">
 
-            <div class="rank-icon">🔥</div>
+            <div class="product-icon">🔥</div>
+
+            <div class="product-type">
+                RANK
+            </div>
 
             <h3>LEGEND</h3>
 
@@ -167,22 +228,87 @@
                 ₹299
             </div>
 
+            <div class="line"></div>
+
             <ul>
-                <li>✔ LEGEND Prefix</li>
-                <li>✔ All Premium Kits</li>
-                <li>✔ Exclusive Commands</li>
-                <li>✔ Custom Effects</li>
-                <li>✔ Special Perks</li>
-                <li>✔ Priority Support</li>
+                <li>✓ LEGEND Prefix</li>
+                <li>✓ All Premium Kits</li>
+                <li>✓ Exclusive Commands</li>
+                <li>✓ Custom Effects</li>
+                <li>✓ Priority Support</li>
             </ul>
 
             <button
-                class="buy-btn"
-                onclick="openPurchase('LEGEND',299)">
+                onclick="openPurchase('LEGEND',299)"
+                class="purchase-btn">
+
                 BUY NOW
+
             </button>
 
         </div>
+
+    </div>
+
+</section>
+
+
+<!-- COINS -->
+
+<section id="coins" class="store-section dark-section">
+
+    <div class="section-title">
+
+        <small>COMING SOON</small>
+
+        <h2>🪙 MineMC <span>Coins</span></h2>
+
+        <p>
+            Coin packages will be available soon.
+        </p>
+
+    </div>
+
+    <div class="coming-card">
+
+        <div>🪙</div>
+
+        <h3>Coin Store</h3>
+
+        <p>
+            Coming Soon
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CRATES -->
+
+<section id="crates" class="store-section">
+
+    <div class="section-title">
+
+        <small>COMING SOON</small>
+
+        <h2>🎁 MineMC <span>Crates</span></h2>
+
+        <p>
+            Exclusive crates and keys are coming soon.
+        </p>
+
+    </div>
+
+    <div class="coming-card">
+
+        <div>🎁</div>
+
+        <h3>Crate Store</h3>
+
+        <p>
+            Coming Soon
+        </p>
 
     </div>
 
@@ -191,34 +317,68 @@
 
 <!-- HOW TO BUY -->
 
-<section id="how" class="section how-section">
+<section id="how" class="how-section">
 
-    <h2>🛒 How To Buy</h2>
+    <div class="section-title">
+
+        <small>SIMPLE & FAST</small>
+
+        <h2>How To <span>Buy</span></h2>
+
+    </div>
+
 
     <div class="steps">
 
         <div class="step">
-            <span>1</span>
-            <h3>Select Rank</h3>
-            <p>Choose the rank you want to purchase.</p>
+
+            <div class="step-number">01</div>
+
+            <h3>Select Product</h3>
+
+            <p>
+                Choose the rank you want from the store.
+            </p>
+
         </div>
 
+
         <div class="step">
-            <span>2</span>
+
+            <div class="step-number">02</div>
+
             <h3>Enter Username</h3>
-            <p>Enter your exact Minecraft username.</p>
+
+            <p>
+                Enter your exact Minecraft username.
+            </p>
+
         </div>
 
-        <div class="step">
-            <span>3</span>
-            <h3>Make Payment</h3>
-            <p>Pay using UPI through the payment page.</p>
-        </div>
 
         <div class="step">
-            <span>4</span>
-            <h3>Verification</h3>
-            <p>Staff will verify your payment and deliver your rank.</p>
+
+            <div class="step-number">03</div>
+
+            <h3>Pay Using UPI</h3>
+
+            <p>
+                Pay the displayed amount using UPI.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">04</div>
+
+            <h3>Get Your Rank</h3>
+
+            <p>
+                Staff verifies your payment and delivers the rank.
+            </p>
+
         </div>
 
     </div>
@@ -228,14 +388,19 @@
 
 <!-- DISCORD -->
 
-<section id="discord" class="discord-section">
+<section class="discord-section">
 
     <div>
 
-        <h2>💬 Join MineMC Discord</h2>
+        <div class="discord-icon">
+            💬
+        </div>
+
+        <h2>Need Help?</h2>
 
         <p>
-            Get support, announcements, giveaways and updates.
+            Join our Discord for support, announcements,
+            giveaways and community updates.
         </p>
 
         <a
@@ -243,7 +408,7 @@
             target="_blank"
             class="discord-btn">
 
-            JOIN DISCORD
+            JOIN MINEMC DISCORD
 
         </a>
 
@@ -252,47 +417,80 @@
 </section>
 
 
-<!-- PURCHASE POPUP -->
+<!-- PURCHASE MODAL -->
 
-<div id="purchasePopup" class="popup">
+<div id="purchaseModal" class="modal">
 
-    <div class="popup-box">
+    <div class="modal-box">
 
-        <button class="close"
+        <button
+            class="modal-close"
             onclick="closePurchase()">
+
             ×
+
         </button>
 
-        <h2>🛒 Purchase Rank</h2>
 
-        <p class="selected-rank">
-            Selected Rank:
+        <div class="modal-header">
+
+            <div class="modal-icon">
+                🛒
+            </div>
+
+            <div>
+
+                <h2>Purchase Rank</h2>
+
+                <p>
+                    Complete your purchase below
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="selected-product">
+
+            <span>
+                Selected Rank
+            </span>
+
             <strong id="selectedRank">
                 VIP
             </strong>
-        </p>
 
+        </div>
+
+
+        <label>
+            Minecraft Username
+        </label>
 
         <input
-            type="text"
             id="username"
-            placeholder="Enter Minecraft Username"
+            type="text"
+            placeholder="Your Minecraft username"
             autocomplete="off">
 
 
-        <div class="payment-box">
+        <div class="payment-area">
 
-            <h3>💳 UPI Payment</h3>
+            <div class="amount-row">
 
-            <p>
-                Amount:
+                <span>
+                    Amount
+                </span>
+
                 <strong>
                     ₹<span id="paymentAmount">49</span>
                 </strong>
-            </p>
+
+            </div>
 
 
-            <div class="upi-box">
+            <div class="upi-area">
 
                 <span>UPI ID</span>
 
@@ -301,8 +499,7 @@
                 </strong>
 
                 <button
-                    onclick="copyUPI()"
-                    class="copy-btn">
+                    onclick="copyUPI()">
 
                     COPY
 
@@ -311,18 +508,18 @@
             </div>
 
 
-            <!-- QR CODE -->
+            <!-- QR PLACEHOLDER -->
 
-            <div class="qr-container">
+            <div class="qr">
 
                 <div class="qr-placeholder">
 
                     <span>📱</span>
 
-                    <p>QR CODE</p>
+                    <strong>QR CODE</strong>
 
                     <small>
-                        Your QR will be added here
+                        QR will be added here
                     </small>
 
                 </div>
@@ -330,16 +527,16 @@
             </div>
 
 
-            <p class="payment-note">
+            <p class="payment-info">
 
-                Scan the QR or use the UPI ID to pay.
+                Scan the QR code or use the UPI ID above.
 
             </p>
 
 
             <button
-                class="pay-btn"
-                onclick="paymentDone()">
+                onclick="payNow()"
+                class="pay-now">
 
                 PAY NOW
 
@@ -347,18 +544,23 @@
 
         </div>
 
+
+        <p class="secure-text">
+            🔒 Secure UPI Payment
+        </p>
+
     </div>
 
 </div>
 
 
-<!-- SUCCESS POPUP -->
+<!-- VERIFICATION MODAL -->
 
-<div id="successPopup" class="popup">
+<div id="verificationModal" class="modal">
 
-    <div class="popup-box success-box">
+    <div class="modal-box verification">
 
-        <div class="success-icon">
+        <div class="verification-icon">
             ✓
         </div>
 
@@ -367,17 +569,30 @@
         </h2>
 
         <p>
-            Your payment details have been submitted.
+            Your payment has been initiated.
         </p>
 
         <p>
-            Your rank will arrive within
-            <strong>12 hours</strong>.
+            Our staff will verify your payment and
+            process your rank.
         </p>
 
+        <div class="delivery">
+            ⏱ Rank delivery: <strong>within 12 hours</strong>
+        </div>
+
+        <a
+            href="https://discord.gg/DEzdfCcqKR"
+            target="_blank"
+            class="discord-btn">
+
+            CONTACT SUPPORT
+
+        </a>
+
         <button
-            class="close-success"
-            onclick="closeSuccess()">
+            onclick="closeVerification()"
+            class="done-btn">
 
             DONE
 
@@ -387,6 +602,8 @@
 
 </div>
 
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -398,9 +615,9 @@
         © 2026 MineMC. All Rights Reserved.
     </p>
 
-    <p class="footer-note">
+    <small>
         Not affiliated with Mojang or Microsoft.
-    </p>
+    </small>
 
 </footer>
 
