@@ -1,5 +1,3 @@
-const UPI_ID = "6207867258@fam";
-
 let selectedRank = "";
 let selectedPrice = 0;
 
@@ -12,19 +10,18 @@ function buyRank(rank, price) {
         "Buy " + rank;
 
     document.getElementById("rankPrice").innerText =
-        "Total: ₹" + price;
+        "Total Amount: ₹" + price;
 
-    document.getElementById("popup").style.display =
-        "flex";
+    document.getElementById("username").value = "";
+
+    document.getElementById("popup").style.display = "flex";
 }
 
 function closePopup() {
-
-    document.getElementById("popup").style.display =
-        "none";
+    document.getElementById("popup").style.display = "none";
 }
 
-function payNow() {
+function paymentDone() {
 
     const username =
         document.getElementById("username").value.trim();
@@ -36,32 +33,24 @@ function payNow() {
         return;
     }
 
-    const note =
-        encodeURIComponent(
-            "MineMC " +
-            selectedRank +
-            " - " +
-            username
-        );
+    closePopup();
 
-    const upi =
-        encodeURIComponent(UPI_ID);
+    document.getElementById("successPopup").style.display = "flex";
+}
 
-    window.location.href =
-        "upi://pay?pa=" +
-        upi +
-        "&pn=MineMC" +
-        "&am=" +
-        selectedPrice +
-        "&cu=INR" +
-        "&tn=" +
-        note;
+function closeSuccess() {
+
+    document.getElementById("successPopup").style.display =
+        "none";
 }
 
 window.onclick = function(event) {
 
     if (event.target.id === "popup") {
-
         closePopup();
+    }
+
+    if (event.target.id === "successPopup") {
+        closeSuccess();
     }
 };
