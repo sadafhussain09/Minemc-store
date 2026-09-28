@@ -2,7 +2,7 @@ let selectedRank = "";
 let selectedPrice = 0;
 
 
-// OPEN PURCHASE POPUP
+// OPEN PURCHASE WINDOW
 
 function openPurchase(rank, price) {
 
@@ -15,50 +15,55 @@ function openPurchase(rank, price) {
 
     document.getElementById("username").value = "";
 
-    document.getElementById("purchasePopup")
+    document
+        .getElementById("purchaseModal")
         .classList.add("active");
 }
 
 
-// CLOSE PURCHASE POPUP
+// CLOSE PURCHASE WINDOW
 
 function closePurchase() {
 
-    document.getElementById("purchasePopup")
+    document
+        .getElementById("purchaseModal")
         .classList.remove("active");
 }
 
 
-// COPY UPI
+// COPY UPI ID
 
 function copyUPI() {
 
     const upi = "6207867258@fam";
 
-    navigator.clipboard.writeText(upi)
-        .then(() => {
+    if (navigator.clipboard) {
 
-            alert("UPI ID copied!");
+        navigator.clipboard.writeText(upi)
+            .then(function() {
 
-        })
-        .catch(() => {
+                alert("UPI ID copied!");
 
-            alert("UPI ID: " + upi);
+            });
 
-        });
+    } else {
+
+        alert("UPI ID: " + upi);
+
+    }
 }
 
 
 // PAY NOW
 
-function paymentDone() {
+function payNow() {
 
     const username =
-        document.getElementById("username")
-            .value.trim();
+        document
+            .getElementById("username")
+            .value
+            .trim();
 
-
-    // Username check
 
     if (username === "") {
 
@@ -67,12 +72,21 @@ function paymentDone() {
         );
 
         return;
+
     }
 
 
-    // UPI PAYMENT LINK
+    /*
+       UPI PAYMENT LINK
 
-    const upiLink =
+       This opens a UPI app with:
+       - UPI ID
+       - MineMC
+       - Amount
+       - Username + Rank
+    */
+
+    const upiURL =
         "upi://pay" +
         "?pa=6207867258@fam" +
         "&pn=MineMC" +
@@ -87,51 +101,53 @@ function paymentDone() {
         );
 
 
-    // Open UPI app
+    // Open UPI application
 
-    window.location.href = upiLink;
+    window.location.href = upiURL;
 
 
     /*
-       After opening the UPI app,
-       show verification popup.
-
        IMPORTANT:
-       This does NOT automatically verify
-       whether the payment was successful.
+
+       Website cannot know whether UPI payment
+       was actually completed.
+
+       This popup is only a verification notice.
     */
 
-    setTimeout(function () {
+    setTimeout(function() {
 
         closePurchase();
 
-        document.getElementById("successPopup")
+        document
+            .getElementById("verificationModal")
             .classList.add("active");
 
-    }, 2500);
+    }, 3000);
 
 }
 
 
-// CLOSE SUCCESS POPUP
+// CLOSE VERIFICATION
 
-function closeSuccess() {
+function closeVerification() {
 
-    document.getElementById("successPopup")
+    document
+        .getElementById("verificationModal")
         .classList.remove("active");
 
 }
 
 
-// CLOSE POPUP WHEN CLICKING OUTSIDE
+// CLICK OUTSIDE MODAL
 
 window.addEventListener("click", function(event) {
 
     const purchase =
-        document.getElementById("purchasePopup");
+        document.getElementById("purchaseModal");
 
-    const success =
-        document.getElementById("successPopup");
+    const verification =
+        document.getElementById("verificationModal");
 
 
     if (event.target === purchase) {
@@ -140,9 +156,10 @@ window.addEventListener("click", function(event) {
 
     }
 
-    if (event.target === success) {
 
-        closeSuccess();
+    if (event.target === verification) {
+
+        closeVerification();
 
     }
 
