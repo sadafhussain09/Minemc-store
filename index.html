@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>MineMC | Official Store</title>
-
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -21,51 +19,29 @@
     </nav>
 </header>
 
-
 <section id="home" class="hero">
-
     <div class="badge">⚡ OFFICIAL MINECRAFT STORE</div>
 
-    <h1>
-        Upgrade Your<br>
-        <span>MineMC</span> Experience
-    </h1>
+    <h1>Upgrade Your<br><span>MineMC</span> Experience</h1>
 
-    <p>
-        Unlock exclusive ranks, perks and rewards
-        on MineMC Network.
-    </p>
+    <p>Unlock exclusive ranks, perks and rewards on MineMC Network.</p>
 
-    <a href="#ranks" class="btn">
-        VIEW RANKS
-    </a>
-
+    <a href="#ranks" class="btn">VIEW RANKS</a>
 </section>
 
-
 <section id="ranks" class="section">
-
     <div class="title">
         <small>CHOOSE YOUR RANK</small>
         <h2>Premium Ranks</h2>
     </div>
 
-
     <div class="cards">
 
-        <!-- VIP -->
-
         <div class="card featured">
-
             <div class="popular">POPULAR</div>
-
             <div class="icon">⭐</div>
-
             <h3>VIP</h3>
-
-            <div class="price">
-                ₹49
-            </div>
+            <div class="price">₹49</div>
 
             <ul>
                 <li>VIP Prefix</li>
@@ -74,24 +50,13 @@
                 <li>Extra Commands</li>
             </ul>
 
-            <button onclick="buyRank('VIP',49)">
-                BUY NOW
-            </button>
-
+            <button onclick="buyRank('VIP',49)">BUY NOW</button>
         </div>
 
-
-        <!-- MVP -->
-
         <div class="card">
-
             <div class="icon">💎</div>
-
             <h3>MVP</h3>
-
-            <div class="price">
-                ₹99
-            </div>
+            <div class="price">₹99</div>
 
             <ul>
                 <li>MVP Prefix</li>
@@ -100,24 +65,13 @@
                 <li>More Commands</li>
             </ul>
 
-            <button onclick="buyRank('MVP',99)">
-                BUY NOW
-            </button>
-
+            <button onclick="buyRank('MVP',99)">BUY NOW</button>
         </div>
 
-
-        <!-- MVP+ -->
-
         <div class="card">
-
             <div class="icon">👑</div>
-
             <h3>MVP+</h3>
-
-            <div class="price">
-                ₹199
-            </div>
+            <div class="price">₹199</div>
 
             <ul>
                 <li>MVP+ Prefix</li>
@@ -126,24 +80,13 @@
                 <li>Priority Support</li>
             </ul>
 
-            <button onclick="buyRank('MVP+',199)">
-                BUY NOW
-            </button>
-
+            <button onclick="buyRank('MVP+',199)">BUY NOW</button>
         </div>
 
-
-        <!-- LEGEND -->
-
         <div class="card">
-
             <div class="icon">🔥</div>
-
             <h3>LEGEND</h3>
-
-            <div class="price">
-                ₹299
-            </div>
+            <div class="price">₹299</div>
 
             <ul>
                 <li>Legend Prefix</li>
@@ -152,77 +95,40 @@
                 <li>Exclusive Benefits</li>
             </ul>
 
-            <button onclick="buyRank('LEGEND',299)">
-                BUY NOW
-            </button>
-
+            <button onclick="buyRank('LEGEND',299)">BUY NOW</button>
         </div>
 
     </div>
-
 </section>
 
-
 <section id="how" class="section how">
-
     <div class="title">
         <small>SIMPLE & FAST</small>
         <h2>How to Buy</h2>
     </div>
 
-
     <div class="steps">
-
-        <div>
-            <b>01</b>
-            <h3>Choose Rank</h3>
-            <p>Select your desired rank.</p>
-        </div>
-
-        <div>
-            <b>02</b>
-            <h3>Enter Username</h3>
-            <p>Enter your Minecraft username.</p>
-        </div>
-
-        <div>
-            <b>03</b>
-            <h3>Pay via UPI</h3>
-            <p>Complete your payment.</p>
-        </div>
-
-        <div>
-            <b>04</b>
-            <h3>Get Rank</h3>
-            <p>Contact staff for verification.</p>
-        </div>
-
+        <div><b>01</b><h3>Choose Rank</h3><p>Select your desired rank.</p></div>
+        <div><b>02</b><h3>Enter Username</h3><p>Enter your Minecraft username.</p></div>
+        <div><b>03</b><h3>Scan QR</h3><p>Pay the exact amount shown.</p></div>
+        <div><b>04</b><h3>Get Your Rank</h3><p>Payment will be verified by staff.</p></div>
     </div>
-
 </section>
-
 
 <section class="discord">
-
     <h2>Need Help?</h2>
+    <p>Join our Discord for support and payment verification.</p>
 
-    <p>
-        Join our Discord for support and payment verification.
-    </p>
-
-    <a href="https://discord.com/" class="btn">
-        JOIN DISCORD
+    <a href="https://discord.gg/DEzdfCcqKR"
+       target="_blank"
+       class="btn">
+       JOIN DISCORD
     </a>
-
 </section>
 
-
 <footer>
-
-    © 2026 MineMC Network
-    <br>
+    © 2026 MineMC Network<br>
     Official Rank Store
-
 </footer>
 
 
@@ -236,49 +142,80 @@
 
         <div class="icon">🛒</div>
 
-        <h2 id="rankName">
-            Buy Rank
-        </h2>
+        <h2 id="rankName">Buy Rank</h2>
 
-        <p id="rankPrice"></p>
+        <p id="rankPrice" class="selected"></p>
 
+        <input id="username"
+               type="text"
+               placeholder="Enter Minecraft Username">
 
-        <input
-            id="username"
-            type="text"
-            placeholder="Minecraft Username"
-        >
+        <div class="payment">
 
+            <h3>💳 UPI PAYMENT</h3>
 
-        <div class="upi">
+            <p>Pay the exact amount using this UPI ID:</p>
 
-            <b>UPI Payment</b>
+            <div class="upi">
+                6207867258@fam
+            </div>
 
-            <p>
-                Pay using the UPI ID below:
+            <div class="qr-placeholder">
+                <span>📱</span>
+                <b>QR CODE</b>
+                <small>QR will be added here</small>
+            </div>
+
+            <p class="secure">
+                🔒 Never share your UPI PIN or OTP.
             </p>
-
-            <strong>
-                YOUR-UPI@upi
-            </strong>
 
         </div>
 
-
-        <button class="pay" onclick="payNow()">
-            PAY NOW
+        <button class="pay" onclick="paymentDone()">
+            I HAVE PAID
         </button>
 
-        <small>
-            Payment will be manually verified by staff.
-        </small>
-
     </div>
-
 </div>
 
+
+<!-- VERIFICATION POPUP -->
+
+<div id="successPopup" class="popup">
+
+    <div class="popup-box success">
+
+        <div class="success-icon">✓</div>
+
+        <h2>Payment in Verification</h2>
+
+        <p>
+            Your payment details have been submitted.
+        </p>
+
+        <div class="delivery">
+            ⏳ <b>Your rank will arrive within 12 hours.</b>
+        </div>
+
+        <p class="small">
+            If you need help, contact our staff on Discord.
+        </p>
+
+        <a href="https://discord.gg/DEzdfCcqKR"
+           target="_blank"
+           class="btn">
+           OPEN DISCORD
+        </a>
+
+        <button class="close-btn" onclick="closeSuccess()">
+            CLOSE
+        </button>
+
+    </div>
+</div>
 
 <script src="script.js"></script>
 
 </body>
-      </html>
+</html>
