@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MineMC | Official Store</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">⛏️ Mine<span>MC</span></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#ranks">Ranks</a>
+        <a href="#how">How to Buy</a>
+    </nav>
+</header>
+
+
+<section id="home" class="hero">
+
+    <div class="badge">⚡ OFFICIAL MINECRAFT STORE</div>
+
+    <h1>
+        Upgrade Your<br>
+        <span>MineMC</span> Experience
+    </h1>
+
+    <p>
+        Unlock exclusive ranks, perks and rewards
+        on MineMC Network.
+    </p>
+
+    <a href="#ranks" class="btn">
+        VIEW RANKS
+    </a>
+
+</section>
+
+
+<section id="ranks" class="section">
+
+    <div class="title">
+        <small>CHOOSE YOUR RANK</small>
+        <h2>Premium Ranks</h2>
+    </div>
+
+
+    <div class="cards">
+
+        <!-- VIP -->
+
+        <div class="card featured">
+
+            <div class="popular">POPULAR</div>
+
+            <div class="icon">⭐</div>
+
+            <h3>VIP</h3>
+
+            <div class="price">
+                ₹49
+            </div>
+
+            <ul>
+                <li>VIP Prefix</li>
+                <li>Exclusive Kit</li>
+                <li>Special Chat Color</li>
+                <li>Extra Commands</li>
+            </ul>
+
+            <button onclick="buyRank('VIP',49)">
+                BUY NOW
+            </button>
+
+        </div>
+
+
+        <!-- MVP -->
+
+        <div class="card">
+
+            <div class="icon">💎</div>
+
+            <h3>MVP</h3>
+
+            <div class="price">
+                ₹99
+            </div>
+
+            <ul>
+                <li>MVP Prefix</li>
+                <li>All VIP Perks</li>
+                <li>Premium Kit</li>
+                <li>More Commands</li>
+            </ul>
+
+            <button onclick="buyRank('MVP',99)">
+                BUY NOW
+            </button>
+
+        </div>
+
+
+        <!-- MVP+ -->
+
+        <div class="card">
+
+            <div class="icon">👑</div>
+
+            <h3>MVP+</h3>
+
+            <div class="price">
+                ₹199
+            </div>
+
+            <ul>
+                <li>MVP+ Prefix</li>
+                <li>All MVP Perks</li>
+                <li>Exclusive Cosmetics</li>
+                <li>Priority Support</li>
+            </ul>
+
+            <button onclick="buyRank('MVP+',199)">
+                BUY NOW
+            </button>
+
+        </div>
+
+
+        <!-- LEGEND -->
+
+        <div class="card">
+
+            <div class="icon">🔥</div>
+
+            <h3>LEGEND</h3>
+
+            <div class="price">
+                ₹299
+            </div>
+
+            <ul>
+                <li>Legend Prefix</li>
+                <li>All Premium Perks</li>
+                <li>Legend Kit</li>
+                <li>Exclusive Benefits</li>
+            </ul>
+
+            <button onclick="buyRank('LEGEND',299)">
+                BUY NOW
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="how" class="section how">
+
+    <div class="title">
+        <small>SIMPLE & FAST</small>
+        <h2>How to Buy</h2>
+    </div>
+
+
+    <div class="steps">
+
+        <div>
+            <b>01</b>
+            <h3>Choose Rank</h3>
+            <p>Select your desired rank.</p>
+        </div>
+
+        <div>
+            <b>02</b>
+            <h3>Enter Username</h3>
+            <p>Enter your Minecraft username.</p>
+        </div>
+
+        <div>
+            <b>03</b>
+            <h3>Pay via UPI</h3>
+            <p>Complete your payment.</p>
+        </div>
+
+        <div>
+            <b>04</b>
+            <h3>Get Rank</h3>
+            <p>Contact staff for verification.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="discord">
+
+    <h2>Need Help?</h2>
+
+    <p>
+        Join our Discord for support and payment verification.
+    </p>
+
+    <a href="https://discord.com/" class="btn">
+        JOIN DISCORD
+    </a>
+
+</section>
+
+
+<footer>
+
+    © 2026 MineMC Network
+    <br>
+    Official Rank Store
+
+</footer>
+
+
+<!-- BUY POPUP -->
+
+<div id="popup" class="popup">
+
+    <div class="popup-box">
+
+        <button class="close" onclick="closePopup()">×</button>
+
+        <div class="icon">🛒</div>
+
+        <h2 id="rankName">
+            Buy Rank
+        </h2>
+
+        <p id="rankPrice"></p>
+
+
+        <input
+            id="username"
+            type="text"
+            placeholder="Minecraft Username"
+        >
+
+
+        <div class="upi">
+
+            <b>UPI Payment</b>
+
+            <p>
+                Pay using the UPI ID below:
+            </p>
+
+            <strong>
+                YOUR-UPI@upi
+            </strong>
+
+        </div>
+
+
+        <button class="pay" onclick="payNow()">
+            PAY NOW
+        </button>
+
+        <small>
+            Payment will be manually verified by staff.
+        </small>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+      </html>
